@@ -1,0 +1,22 @@
+{
+  "catalog": [
+    {
+      "name": "Cesium 3D Tiles example",
+      "type": "group",
+      "description": "This group has Cesium 3DTiles dataset examples",
+      "isOpen": true,
+      "members": [
+        {
+          "name": "3DTiles test dataset (click Ideal Zoom to see)",
+          "type": "3d-tiles",
+          "url": "https://qld.digitaltwin.terria.io/api/v0/data/2eeeadde-42a9-4372-aaec-abba6275a504/NPB/tileset.json",
+          "zoomOnAddToWorkbench": true,
+          "options": {
+            "maximumScreenSpaceError": 1,
+            "maximumNumberOfLoadedTiles": 1000
+          }
+        }
+      ]
+    }
+  ]
+}

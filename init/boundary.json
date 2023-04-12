@@ -1,0 +1,340 @@
+{
+  "catalog": [
+    {
+     "type": "group",
+     "name": "Boundaries",
+     "members": [
+         {     
+	     "type": "group",
+             "name": "Local Geological Sites",
+             "members": [
+                 {
+	             "type": "csv",
+	             "name": "Somerset LGS",
+	             "url": "data/SomersetLGS2023.csv",
+	             "activeStyle": "Local Authority",
+	             "isOpenInWorkbench": false
+                 }
+	     ]
+	 },
+         {     
+	     "type": "group",
+             "name": "Geo Conservation Review Sites",
+             "members": [
+         {
+	     "type": "csv",
+	     "name": "Devon GCR",
+	     "url": "data/GCR-Devon.csv",
+             "isOpenInWorkbench": false,
+             "activeStyle": "admin_area",
+             "defaultStyle": {
+                 "color": {
+		     "colorColumn": "admin_area", 
+                     "binColors": [
+                         "rgba(0,0,200,1.00)",
+                         "rgba(0,0,200,1.00)"			   
+                     ],
+                     "numberOfBins": 2
+		 }
+             }
+         },
+         {
+	      "type": "csv",
+	      "name": "Dorset GCR",
+	      "url": "data/GCR-Dorset.csv",
+              "isOpenInWorkbench": false,
+              "activeStyle": "admin_area",
+	      "description": "",
+	      "attribution": "",
+	      "defaultStyle": {
+                 "color": {
+		   "colorColumn": "admin_area", 
+                   "binColors": [
+                     "rgba(200,0,0,1.00)",
+	             "rgba(0,200,0,1.00)",
+	             "rgba(0,0,200,1.00)"
+                    ],
+                   "numberOfBins": 3
+		 }
+            }
+       },
+       {
+	       "type": "csv",
+	       "name": "Somerset GCR",
+	       "url": "data/GCR-Somerset.csv",
+               "isOpenInWorkbench": false,
+	       "activeStyle": "admin_area",
+	       "defaultStyle": {
+                 "color": {
+		     "colorColumn": "admin_area", 
+                     "binColors": [
+                         "rgba(0,200,0,1.00)"
+                     ],
+                     "numberOfBins": 1
+		  }
+              }
+          }    
+       ]
+       },
+       {
+         "type": "esri-featureServer",
+         "name": "Regions",
+         "url": "https://services1.arcgis.com/ESMARspQHYMw9BZ9/ArcGIS/rest/services/Regions_December_2022_EN_BGC/FeatureServer/0",
+         "useStyleInformationFromService": true,
+	 "description": "Regions of England as at December 2022. Generalised (20m) clipped to the coastline (Mean High Water mark",
+	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",       
+	 "info": [
+	    {
+		   "name": "Attribution",
+		   "content": "Contains OS data © Crown copyright and database right 2022"
+	    }
+	 ],
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "isOpenInWorkbench": false,
+	 "hideLegendInWorkbench": true,
+	 "opacity": 0.2,
+	 "disableOpacityControl": true,
+	 "showDisableStyleOption": false,
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+            "fill": "green",
+            "fill-opacity": 0.2
+         },
+	 "featureInfoTemplate": {
+             "name": "Region - {{RGN22NM}}",
+	     "template": "{{RGN22NM}}"
+         }
+       },
+       {
+         "type": "esri-featureServer",
+         "name": "Counties and Unitary Authorities",
+         "url":"https://services1.arcgis.com/ESMARspQHYMw9BZ9/arcgis/rest/services/Counties_and_Unitary_Authorities_December_2022_UK_BGC/FeatureServer/0",
+         "useStyleInformationFromService": false,
+         "description": "Boundaries for Counties and Unitary Authorities as at December 2022. Generalised (20m) clipped to the coastline (Mean High Water mark",
+	 	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",
+	 "info": [
+	    {
+		   "name": "Attribution",
+		   "content": "Contains OS data © Crown copyright and database right 2022"
+	    }
+	 ],
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "isOpenInWorkbench": false,
+	 "hideLegendInWorkbench": true,   
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+            "fill": "green",
+            "fill-opacity": 0.2
+         },
+         "featureInfoTemplate": {
+		        "name": "County - {{CTYUA22NM}}",
+		        "template": "{{CTYUA22NM}}"
+         }
+       },
+       {
+       "type": "group",
+       "name": "Parishes",
+       "members": [	     
+       {  
+         "type": "geojson",
+         "name": "Cornwall Parishes",
+         "url": "data/parishCornwall1m.geojson",
+	 "description": "Parish boundaries in Cornwall",
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",  
+         "isOpenInWorkbench": false,
+	 "zoomOnAddToWorkbench": true,
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+             "fill": "yellow",
+            "fill-opacity": 0.1
+         },
+         "featureInfoTemplate": {
+            "name": "Cornwall Parishes - {{#NAME}}{{NAME}}{{/NAME}}{{^NAME}}{{FILE_NAME}}{{/NAME}}",
+            "template": "{{#NAME}}{{NAME}}{{/NAME}}<br>{{FILE_NAME}}<br>{{DESCRIPTIO}}"
+         }
+       },
+       {  
+         "type": "geojson",
+         "name": "Devon Parishes",
+         "url": "data/parishDevon1mMini.geojson",
+         "description": "Parish boundaries in Devon",
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",      
+         "isOpenInWorkbench": false,
+	 "zoomOnAddToWorkbench": true,
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+            "fill": "red",
+            "fill-opacity": 0.1
+         },
+         "featureInfoTemplate": {
+            "name": "Devon Parishes - {{#NAME}}{{NAME}}{{/NAME}}{{^NAME}}{{FILE_NAME}}{{/NAME}}",
+            "template": "{{#NAME}}{{NAME}}{{/NAME}}<br>{{FILE_NAME}}<br>{{DESCRIPTIO}}"
+         }
+       },
+       {  
+         "type": "geojson",
+         "name": "Dorset Parishes",
+         "url": "data/parishDorset1m.geojson",
+	 "description": "Parish boundaries in Dorset",
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",   
+         "isOpenInWorkbench": false,
+	 "zoomOnAddToWorkbench": true,
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+	    "fill": "green",
+            "fill-opacity": 0.1
+         },
+         "featureInfoTemplate": {
+            "name": "Dorset Parishes - {{#NAME}}{{NAME}}{{/NAME}}{{^NAME}}{{FILE_NAME}}{{/NAME}}",
+            "template": "{{#NAME}}{{NAME}}{{/NAME}}<br>{{FILE_NAME}}<br>{{DESCRIPTIO}}"
+         }
+       },
+       {
+	       "name": "Vector Dorset Parishes",
+               "type": "mvt",
+	       "url": "https://geoffrowland.github.io/vectorDorsetParish/{z}/{x}/{y}.pbf",
+	       "layer": "DorsetParish"
+       },
+       {  
+         "type": "geojson",
+         "name": "Somerset Parishes",
+         "url": "data/parishSomerset1mMini.geojson",
+	 "description": "Parish boundaries in Somerset",
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",  
+         "isOpenInWorkbench": false,
+	 "zoomOnAddToWorkbench": true,
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+            "fill": "blue",
+            "fill-opacity": 0.1
+         },
+         "featureInfoTemplate": {
+            "name": "Somerset Parishes - {{#NAME}}{{NAME}}{{/NAME}}{{^NAME}}{{FILE_NAME}}{{/NAME}}",
+            "template": "{{#NAME}}{{NAME}}{{/NAME}}<br>{{FILE_NAME}}<br>{{DESCRIPTIO}}"
+         }
+       }
+      ]
+     },
+       {  
+         "type": "geojson",
+         "name": "Somerset Districts",
+         "url": "data/SomersetDistricts1mMini.geojson",
+	 "description": "Former District boundaries in Somerset",
+	 "attribution": "Contains OS data © Crown copyright and database right 2022",
+	 "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",  
+         "isOpenInWorkbench": false,
+	 "zoomOnAddToWorkbench": true,
+         "style": {
+            "stroke": "black",
+            "stroke-width": 1,
+            "stroke-opacity": 1,
+            "fill": "blue",
+            "fill-opacity": 0.1
+         },
+	 "featureInfoTemplate": {
+             "name": "{{LAD22NM}}",
+             "template": "{{LAD22NM}}"
+         }
+       }, 
+       {     
+         "type": "group",
+         "name": "Counties",
+         "members": [     
+         {
+             "type": "geojson",
+             "name": "Cornwall",
+             "url": "data/cornwall.geojson",
+ 	     "description": "County boundary of Cornwall",
+	     "attribution": "Contains OS data © Crown copyright and database right 2022",
+	     "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",  
+             "zoomOnAddToWorkbench": true,
+             "style": {
+                 "stroke": "black",
+                 "stroke-width": 2,
+                 "fill": "red",
+                 "fill-opacity": 0.2
+	     },
+             "featureInfoTemplate": {
+                 "name": "Cornwall",
+                 "template": "{{CTYNME}}"
+             }	     
+         },
+         {
+             "type": "geojson",
+             "name": "Devon",
+             "url": "data/devon.geojson",
+	     "description": "County boundary of Devon",
+	     "attribution": "Contains OS data © Crown copyright and database right 2022",
+	     "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",  
+             "zoomOnAddToWorkbench": true,
+             "style": {
+                 "stroke": "black",
+                 "stroke-width": 2,
+                 "fill": "green",
+                 "fill-opacity": 0.2
+             },
+	     "featureInfoTemplate": {
+                 "name": "Devon",
+                 "template": "{{CTYNME}}"
+             }		 
+         },
+         {
+             "type": "geojson",
+             "name": "Dorset",
+             "url": "data/dorset.geojson",
+	     "description": "County boundary of Dorset",
+	     "attribution": "Contains OS data © Crown copyright and database right 2022",
+	     "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",   
+             "zoomOnAddToWorkbench": true,
+             "style": {
+                 "stroke": "black",
+                 "stroke-width": 2,
+                 "fill": "yellow",
+                 "fill-opacity": 0.2
+             },
+             "featureInfoTemplate": {
+                 "name": "Dorset",
+                 "template": "{{CTYNME}}"
+             }			 
+         },
+         {
+             "type": "geojson",
+             "name": "Somerset",
+             "url": "data/somerset.geojson",
+	     "description": "County boundary of Cornwall",
+	     "attribution": "Contains OS data © Crown copyright and database right 2022",
+	     "dataCustodian": "Office for National Statistics licensed under the Open Government Licence v.3.0.",    
+             "zoomOnAddToWorkbench": true,
+             "style": {
+                 "stroke": "black",
+                 "stroke-width": 2,
+                 "fill": "blue",
+                 "fill-opacity": 0.2
+             },
+             "featureInfoTemplate": {
+                 "name": "Somerset",
+                 "template": "{{CTYNME}}"
+             }	
+         }
+      ]
+    }
+  ]
+}
+]
+}

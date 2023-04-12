@@ -1,0 +1,360 @@
+{
+  "catalog": [
+     {
+     "type": "group",
+     "name": "Terrain",
+     "members": [
+	{
+	     "type": "esri-mapServer",
+             "name": "LIDAR_Composite_DTM_1m_2022",
+	     "description": "This is the 2022 1m DTM LIDAR Composite Tinted Shaded Relief model produced by the Environment Agency. The Tinted Shaded Relief (TSR) is a color 3D representation of the terrain, created by merging the images from the Elevation-coded and Hillshade methods.",
+             "url": "https://environment.data.gov.uk/image/rest/services/SURVEY/LIDARCompositeDTM1m2022/MapServer/",
+	     "layers": "3",
+	     "allowFeaturePicking":false,
+	     "hideLegendInWorkbench":true
+	 },    
+         {
+          "url": "https://geoffrowland.github.io/Hillshade-25m/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "show": true,
+          "dataCustodian": "Geoff Rowland",
+          "isOpenInWorkbench": true,
+          "name": "Hillshade 25m",
+          "maximumLevel": 12,
+	  "minimumLevel": 2,
+          "opacity": 1.0,
+          "isOpenInWorkbench": false,
+          "rectangle": {
+		"west": -10.722656,
+		"south": 35.995785,
+		"east": 6.086426,
+		"north": 60.930432
+	  },
+          "clipToRectangle": true,
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+		  "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+	{
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Cornwall-West/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Cornwall West",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -6.503906,
+			  "south": 49.837983,
+			  "east": -4.921876,
+			  "north": 50.597186
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+	{
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Cornwall-East/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Cornwall East",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -4.921875,
+			  "south": 50.176899,
+			  "east": -4.218751,
+			  "north": 51.289406
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+	{
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Devon-West/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Devon West",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -4.218750,
+			  "south": 50.176898,
+			  "east": -3.867188,
+			  "north": 51.261915
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+       {
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Devon-East/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Devon East",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -3.867188,
+			  "south": 50.176898,
+			  "east": -3.515625,
+			  "north": 51.261915
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+	{
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Devon-Somerset/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Devon Somerset",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -3.515625,
+			  "south": 50.345460,
+			  "east": -3.164063,
+			  "north": 51.944265
+                 },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },						     
+        {
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Devon-Dorset-Somerset/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Devon Dorset Somerset",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -3.515625,
+			  "south": 50.345460,
+			  "east": -2.812500,
+			  "north": 51.944265
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+        {
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Dorset-Somerset/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Dorset Somerset",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -2.812500,
+			  "south": 50.569283,
+			  "east": -2.460938,
+			  "north": 52.160455
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+        {
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Dorset-Somerset-East/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Dorset Somerset East",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -2.460937,
+			  "south": 50.51253,
+			  "east": -2.109375,
+			  "north": 52.160455
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+        {
+          "url": "https://geoffrowland.github.io/Hillshade-1m-Dorset-Hampshire/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 1m Dorset Hampshire",
+          "maximumLevel": 16,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -2.109365,
+			  "south": 50.569283,
+			  "east": -0.932000,
+			  "north": 52.160455
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+        {
+          "url": "https://geoffrowland.github.io/Hillshade-2m-Coast/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 2m Coastal",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -6.409149,
+			  "south": 49.861891,
+			  "east": -0.950317,
+			  "north": 51.732982
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+        {
+          "url": "https://geoffrowland.github.io/Hillshade-5m/{z}/{x}/{reverseY}.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Hillshade 5m",
+          "maximumLevel": 15,
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -6.421509,
+			  "south": 49.862776,
+			  "east": -0.549316,
+			  "north": 51.599800
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+          "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        },
+	{
+          "url": "images/grey.png",
+          "type": "url-template-imagery",
+          "dataCustodian": "Geoff Rowland",
+          "name": "Background",
+          "isOpenInWorkbench": false,
+          "opacity": 1.0,
+          "rectangle": {
+			  "west": -10.722656,
+			  "south": 35.995785,
+			  "east": 6.086426,
+			  "north": 60.930432
+		  },
+          "tileErrorHandlingOptions": {
+			  "treat403AsError": false,
+			  "treat404AsError": false,
+			  "ignoreUnknownTileErrors": true
+		  },
+		  "info": [
+            {
+              "name": "Licence",
+              "content": "[Creative Commons Attribution 4.0 International (CC BY 4.0)](http://creativecommons.org/licenses/by/4.0/)"
+            }
+          ]
+        } 
+      ]
+    }
+  ]    
+}
